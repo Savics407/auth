@@ -1,7 +1,7 @@
 
 import { FaCheck } from 'react-icons/fa'
 
-function Form() {
+function Form({formData , setFormData}) {
     return (
         <>
             <div className="flex items-center justify-between mb-12 rule relative text-base">
@@ -29,11 +29,15 @@ function Form() {
                 </div>
                 <div className="input">
                     <label className="">Full Name </label>
-                    <input type="text" placeholder="enter full name" className="box"/>
+                    <input type="text" placeholder="enter full name" className="box" required
+                    value={formData.FullName}
+                        onChange={(event) => setFormData({...formData, FullName: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>Phone Number</label>
-                    <input type="tel" placeholder="enter phone number" className="box"/>
+                    <input type="tel" placeholder="enter phone number" className="box"
+                    value={formData.phoneNumber}
+                        onChange={(event) => setFormData({...formData, phoneNumber: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>State</label>
@@ -48,11 +52,15 @@ function Form() {
                 </div>
                 <div className="input">
                     <label>Address</label>
-                    <input type="text" placeholder="enter address" className="box"/>
+                    <input type="text" placeholder="enter address" className="box" required
+                    value={formData.address}
+                        onChange={(event) => setFormData({...formData, address: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>Date Of Birth</label>
-                    <input type="date" placeholder="" className="box text-grey"/>
+                    <input type="date" placeholder="" className="box text-grey" 
+                    required value={formData.dateOfBirth}
+                        onChange={(event) => setFormData({...formData, dateOfBirth: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>Net Worth</label>
@@ -69,9 +77,9 @@ function Form() {
                     </select>
                 </div>
                
-                <div>
+                {/* <div>
                     <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium">Create Account</button>
-                </div>
+                </div> */}
             </form>
         </>
     )
