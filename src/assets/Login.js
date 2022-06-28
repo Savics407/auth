@@ -63,7 +63,7 @@ function Login() {
                 </div>
 
             </form>
-                    <div className="w-80">
+                    <div className="lg:w-80">
                         <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium">
                             Log in
                         </button>
