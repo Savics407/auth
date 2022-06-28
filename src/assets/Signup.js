@@ -65,7 +65,7 @@ function Auth() {
         <div className="font-family">
             <Tab />
             <div className="lg:flex justify-between">
-                <div className="lg:px-24 md:px-24 px-10 lg:pt-20 pt-14 pb-24 w-full lg:w-1/2 border">
+                <div className="lg:px-24 md:px-24 px-10 lg:pt-20 pt-14 pb-24 w-full lg:w-1/2">
                     {PageView()}
                     <div className="lg:w-80 mb-16">
                         <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
