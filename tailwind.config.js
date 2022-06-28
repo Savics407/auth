@@ -19,7 +19,8 @@ module.exports = {
         border: "rgba(0, 142, 16, 0.46);",
         input : "#F9FFFF",
         ccc: "cccccc",
-        grey : '#828282'
+        grey : '#828282',
+        sec :'#252F40'
       },
     },
   },

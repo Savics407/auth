@@ -65,9 +65,9 @@ function Auth() {
         <div className="font-family">
             <Tab />
             <div className="lg:flex justify-between">
-                <div className="lg:px-24 md:px-24 px-10 lg:pt-20 pt-14 pb-5 w-full lg:w-1/2">
+                <div className="lg:px-24 md:px-24 px-10 lg:pt-20 pt-14 pb-24 w-full lg:w-1/2 border">
                     {PageView()}
-                    <div className="w-80 mb-16">
+                    <div className="lg:w-80 mb-16">
                         <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
                         onClick={() => {
                             if(step === FormTitles.length -1) {
@@ -80,6 +80,7 @@ function Auth() {
                             {step === FormTitles.length -1 ? "Create Account" : "Next"}
                         </button>
                     </div>
+                    <div ></div>
                 </div>
                 <div className=" bg-[url('../src/assets/images/build.jpeg')] bg-black lg:w-1/2 relative bg-cover bg-center build hidden lg:block">
                     {/* <img src={bg} className=" w-full h-full object-cover absolute"/>     */}
