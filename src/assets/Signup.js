@@ -36,6 +36,9 @@ function Auth() {
         annualIncome: "",
     })
 
+    function signup() {
+        console.log(formData);
+    }
     const FormTitles = ["User Details", "Verification", "Setup"];
 
     const PageView = () => {
@@ -52,29 +55,20 @@ function Auth() {
             <Tab />
             <div className="flex justify-between">
                 <div className="px-24 pt-20 pb-5 w-1/2">
-                    {/* <h1>{FormTitles[step]}</h1> */}
-                    {/* <UserDetails /> */}
-                    {/* <Verification />     */}
-                    {/* <Setup /> */}
                     {PageView()}
-                    {/* <button disabled={step == 0 } 
-                    onClick={() => {
-                        setStep((currentPage) => currentPage - 1)
-                    }} className="border ml-2 p-1 bg-blue-400">Prev</button> */}
-                <div className="w-80 mb-16">
-                    <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
-                    onClick={() => {
-                        if(step === FormTitles.length -1) {
-                            alert("Form Submitted");
-                            console.log(formData);
-                        } else {
-                            setStep((currentPage) => currentPage + 1)
-                        }
-                    }}>
-                        {step=== FormTitles.length -1 ? "Create Account" : "Next"}
-                    </button>
-                </div>
-                    
+                    <div className="w-80 mb-16">
+                        <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
+                        onClick={() => {
+                            if(step === FormTitles.length -1) {
+                                alert("Form Submitted");
+                                signup();
+                            } else {
+                                setStep((currentPage) => currentPage + 1)
+                            }
+                        }}>
+                            {step === FormTitles.length -1 ? "Create Account" : "Next"}
+                        </button>
+                    </div>
                 </div>
                 <div className=" bg-[url('../src/assets/images/build.jpeg')] bg-black w-1/2 relative bg-cover bg-center build">
                     {/* <img src={bg} className=" w-full h-full object-cover absolute"/>     */}

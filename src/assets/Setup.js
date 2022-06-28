@@ -92,7 +92,7 @@ function Form({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label>Address</label>
-                    <input type="text" placeholder="enter address" className="box" required value={formData.address} onChange={(event) => setFormData({...formData, address: event.target.value})}/>
+                    <input type="text" placeholder="enter home address" className="box" required value={formData.address} onChange={(event) => setFormData({...formData, address: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>Date Of Birth</label>
