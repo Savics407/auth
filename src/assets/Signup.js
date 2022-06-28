@@ -38,7 +38,7 @@ function Auth() {
 
     async function signup() {
         console.log(formData);
-        let result = await fetch("http://reic.api.simpoo.biz/api/register", {
+        let result = await fetch("https://reic.api.simpoo.biz/api/register", {
             method:'POST',
             body:JSON.stringify(formData),
             headers: {
