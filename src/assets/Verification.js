@@ -19,10 +19,10 @@ function Verification({formData , setFormData}) {
                     <p className="text-grey">Account Setup</p>
                 </div>
             </div>
-            <form className="w-80 font-family">
+            <form className="form">
                 <div>
-                    <h1 className="text-green text-4xl font-semibold mb-3">OTP Verification</h1>
-                    <p className="text-base mb-10 font-normal w-72">Enter the 5digit code sent to <b>email....@gmail.com</b> for verification</p>
+                    <h1 className="page-text">OTP Verification</h1>
+                    <p className="description">Enter the 5digit code sent to <b>email....@gmail.com</b> for verification</p>
                 </div>
                 <div className="input">
                     <label className="">Enter Code </label>

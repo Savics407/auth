@@ -1,12 +1,12 @@
 // import { useState } from "react";
-
+import {FaRegEyeSlash} from "react-icons/fa"
 
 function UserDetails({formData , setFormData}) {
     // const [step, setStep] = useState(0);
 
     return (
         <>
-            <div className="flex items-center justify-between mb-12 rule relative text-base">
+            <div className="flex items-center justify-between mb-12 rule relative lg:text-base">
                 <div className="tabs">
                     <span className="indicator">1</span>
                     <p>Create Account</p>
@@ -20,15 +20,15 @@ function UserDetails({formData , setFormData}) {
                     <p className="text-grey">Account Setup</p>
                 </div>
             </div>
-            <form className="w-80 font-family">
+            <form className="form">
                 <div>
-                    <h1 className="text-green text-4xl font-semibold mb-3">Create Account</h1>
-                    <p className="text-base mb-10 font-normal w-72">Create an account with REIC, this would only take few minutes.</p>
+                    <h1 className="page-text">Create Account</h1>
+                    <p className="description">Create an account with REIC, this would only take few minutes.</p>
                 </div>
                 <div className="input">
                     <label className="">Email Address </label>
                     <input 
-                        type="text" 
+                        type="email" 
                         placeholder="enter email address" 
                         className="box" 
                         value={formData.email}
@@ -41,19 +41,35 @@ function UserDetails({formData , setFormData}) {
                         onChange={(event) => setFormData({...formData, phoneNumber: event.target.value})}
                         required />
                 </div>
-                <div className="input">
+                <div className="input relative">
                     <label>Password</label>
-                    <input type="password" placeholder="enter password" className="box"
+                    <input type="password" placeholder="enter password" className="box" id="pass"
                     value={formData.password}
                         onChange={(event) => setFormData({...formData, password: event.target.value})}
                         required/>
+                        <FaRegEyeSlash  className="text-grey absolute top-11 right-4 cursor-pointer" onClick={() => {
+                            let x = document.getElementById('pass')
+                            if (x.type === "password" ) {
+                                x.type = "text"
+                            } else {
+                                x.type = "password"
+                            }
+                        }}/>
                 </div>
-                <div className="input">
+                <div className="input relative">
                     <label>Confirm Password</label>
-                    <input type="password" placeholder="confirm password" className="box"
+                    <input type="password" placeholder="confirm password" className="box" id="confirm"
                     value={formData.confirmPassword}
                         onChange={(event) => setFormData({...formData, confirmPassword: event.target.value})}
                         required/>
+                        <FaRegEyeSlash className="text-grey absolute top-11 right-4 cursor-pointer" onClick={() => {
+                            let x = document.getElementById('confirm')
+                            if (x.type === "password" ) {
+                                x.type = "text"
+                            } else {
+                                x.type = "password"
+                            }
+                        }}/>
                 </div>
                 <div className=" flex items-start">
                     <input type="checkbox" required className="border mr-2"/>

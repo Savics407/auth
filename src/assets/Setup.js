@@ -22,10 +22,10 @@ function Form({formData , setFormData}) {
                     <p className="">Account Setup</p>
                 </div>
             </div>
-            <form className="w-80 font-family">
+            <form className="form">
                 <div>
-                    <h1 className="text-green text-4xl font-semibold mb-3">Account Setup</h1>
-                    <p className="text-base mb-10 font-normal w-72">Kindly provide accurate details and fill every requires below</p>
+                    <h1 className="page-text">Account Setup</h1>
+                    <p className="description">Kindly provide accurate details and fill every requires below</p>
                 </div>
                 <div className="input">
                     <label className="">Full Name </label>
@@ -36,7 +36,7 @@ function Form({formData , setFormData}) {
                 
                 <div className="input">
                     <label>Phone Number</label>
-                    <input type="tel" placeholder="enter phone number" className="box"
+                    <input type="tel" placeholder="enter phone number" className="box" disabled
                     value={formData.phoneNumber}
                         onChange={(event) => setFormData({...formData, phoneNumber: event.target.value})}/>
                 </div>
@@ -45,7 +45,7 @@ function Form({formData , setFormData}) {
                     {/* <input type="option" placeholder="Choose State" className="box"/> */}
                     <select className='box text-green'>
                         {/* <option value="" className='text-grey'>--Choose State--</option> */}
-                            <option disabled selected>--Choose State--</option>
+                            <option disabled selected hidden>--Choose State--</option>
                             <option value="Abia">Abia</option>
                             <option value="Adamawa">Adamawa</option>
                             <option value="Akwa Ibom">Akwa Ibom</option>
