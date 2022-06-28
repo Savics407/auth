@@ -19,8 +19,16 @@
   z-index: -1;
 }
 
-.create::before {
+.rule::after {
   content: " ";
+  position: absolute;
+  width: 15%;
+  border-top: 2.5px solid #008E10;
+  top: 20px;
+  z-index: -1;
+}
+.create::after {
+  content: "";
   position: absolute;
   width: 50%;
   border-top: 2.5px solid #008E10;
@@ -29,37 +37,29 @@
   z-index:-1;
 }
 
+/* 
 .OTP::before {
   content: " ";
-  position: absolute;
+  position: absolute; */
   /* width: 230px; */
-  width: 200%;
+  /* width: 200%;
+  border-top: 2.5px solid #008E10;
+  top: 20px;
+  left: 0;
+  z-index: -1;
+} */
+
+.setup::after {
+  content: " ";
+  position: absolute;
+  /* width: 420px; */
+  width: 90%;
   border-top: 2.5px solid #008E10;
   top: 20px;
   left: 0;
   z-index: -1;
 }
 
-.setup::before {
-  content: " ";
-  position: absolute;
-  /* width: 420px; */
-  width: 350%;
-  border-top: 2.5px solid #008E10;
-  top: 20px;
-  left: 0;
-  z-index: -1;
-}
-.create::after {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  border-top: 2.5px solid #008E10;
-  top: 20px;
-  left: 77px;
-  z-index: 1;
-  visibility: hidden
-}
 
 .tabs {
   @apply flex flex-col text-center items-center relative;

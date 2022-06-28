@@ -4,9 +4,9 @@ import { FaCheck } from 'react-icons/fa'
 function Form({formData , setFormData}) {
     return (
         <>
-            <div className="flex items-center justify-between mb-12 rule relative text-base">
+            <div className="flex items-center justify-between mb-12 rule  setup relative text-base">
                 <div className="tabs">
-                    <span className="indicator create setup pl-2.5 !pt-2 text-green border-green ">
+                    <span className="indicator pl-2.5 !pt-2 text-green border-green ">
                         <FaCheck className='' />
                     </span>
                     <p>Create Account</p>

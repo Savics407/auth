@@ -8,7 +8,7 @@ function UserDetails({formData , setFormData}) {
         <>
             <div className="flex items-center justify-between mb-12 rule relative text-base">
                 <div className="tabs">
-                    <span className="indicator create">1</span>
+                    <span className="indicator">1</span>
                     <p>Create Account</p>
                 </div>
                 <div className="tabs">
