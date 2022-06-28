@@ -22,7 +22,7 @@
 .rule::after {
   content: " ";
   position: absolute;
-  width: 15%;
+  width: 12%;
   border-top: 2.5px solid #008E10;
   top: 20px;
   z-index: -1;
