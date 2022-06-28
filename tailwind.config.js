@@ -18,7 +18,7 @@ module.exports = {
         green: "#008E10",
         border: "rgba(0, 142, 16, 0.46);",
         input : "#F9FFFF",
-        ccc : 'cccccc',
+        ccc: "cccccc",
         grey : '#828282'
       },
     },

@@ -27,11 +27,11 @@ function Auth() {
         phoneNumber: "",
         password : "",
         confirmPassword: "",
-        OTPCode: "0",
-        FullName: " ",
+        OTPCode: "",
+        FullName: "",
         state: " ",
         city: " ",
-        address: " ",
+        address: "",
         dateOfBirth: "",
         annualIncome: "",
     })
@@ -61,7 +61,7 @@ function Auth() {
                     onClick={() => {
                         setStep((currentPage) => currentPage - 1)
                     }} className="border ml-2 p-1 bg-blue-400">Prev</button> */}
-                <div className="w-80">
+                <div className="w-80 mb-16">
                     <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
                     onClick={() => {
                         if(step === FormTitles.length -1) {

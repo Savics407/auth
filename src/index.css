@@ -22,7 +22,7 @@
 .create::before {
   content: " ";
   position: absolute;
-  width: 36px;
+  width: 50%;
   border-top: 2.5px solid #008E10;
   top: 20px;
   left: 0;
@@ -32,7 +32,8 @@
 .OTP::before {
   content: " ";
   position: absolute;
-  width: 230px;
+  /* width: 230px; */
+  width: 200%;
   border-top: 2.5px solid #008E10;
   top: 20px;
   left: 0;
@@ -42,7 +43,8 @@
 .setup::before {
   content: " ";
   position: absolute;
-  width: 420px;
+  /* width: 420px; */
+  width: 350%;
   border-top: 2.5px solid #008E10;
   top: 20px;
   left: 0;
@@ -81,7 +83,11 @@
       @apply border rounded-xl border-border bg-input p-3 mb-5 text-sm focus-within:shadow-lg;
       outline: none
     }
-  
+    
+    .box option {
+      @apply bg-input
+    }
+
     label {
       @apply font-medium text-sm mb-2
     }
@@ -91,3 +97,5 @@
       /* width: 20px; */
       padding: 10px;
     }
+
+
