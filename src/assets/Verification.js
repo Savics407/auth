@@ -26,13 +26,13 @@ function Verification({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label className="">Enter Code </label>
-                    <input type="number" placeholder="5 digit code" className="box" required
+                    <input type="number" placeholder="5 digit code" className="box" 
                     value={formData.OTPCode}
                         onChange={(event) => setFormData({...formData, OTPCode: event.target.value})}/>
                 </div>
                 
                 <div className=" flex items-start mb-7">
-                    {/* <input type="checkbox" required className="border mr-2"/> */}
+                    {/* <input type="checkbox"  className="border mr-2"/> */}
                     <p className="text-xs tracking-wide">Didn’t get an code? <span className="text-green font-semibold">Resend </span> </p>
                 </div>
                 {/* <div>

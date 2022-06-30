@@ -1,10 +1,6 @@
 import logo from "./images/polygon.png";
 // import bg from "./images/build.jpeg";
 // import Form from "./UserDetails";
-import Verification from "./Verification"
-import Setup from "./Setup"
-import UserDetails from "./UserDetails";
-import { useState } from "react";
 import {FaRegEyeSlash} from "react-icons/fa"
 
 
@@ -46,7 +42,7 @@ function Login() {
                 <div className="input relative">
                     <label>Password</label>
                     <input type="password" placeholder="enter password" className="box" id="pass"
-                        required/>
+                        />
                         <FaRegEyeSlash  className="text-grey absolute top-11 right-4 cursor-pointer" onClick={() => {
                             let x = document.getElementById('pass')
                             if (x.type === "password" ) {
@@ -58,7 +54,7 @@ function Login() {
                 </div>
                 
                 <div className=" flex items-start">
-                    {/* <input type="checkbox" required className="border mr-2"/> */}
+                    {/* <input type="checkbox"  className="border mr-2"/> */}
                     <p className="text-xs tracking-wide">Forgot Password?</p>
                 </div>
 

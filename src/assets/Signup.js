@@ -24,7 +24,7 @@ function Auth() {
     const [step, setStep] = useState(0);
     const [formData, setFormData] = useState({
         email: "",
-        phoneNumber: "",
+        phone: "",
         password : "",
         confirmPassword: "",
         OTPCode: "",
@@ -32,22 +32,22 @@ function Auth() {
         state: "",
         city: "",
         address: "",
-        dateOfBirth: "",
+        dateOfBirth: new Date(""),
         annualIncome: "",
     })
 
     async function signup() {
         console.log(formData);
-        let result = await fetch("http://reic.api.simpoo.biz/api/register", {
+        const response = await fetch("https://reic.api.simpoo.biz/api/register", {
             method:'POST',
             body:JSON.stringify(formData),
             headers: {
                 "Accept" : "application/json"
             }
         })
-        result = await result.json()
+        const result = await response.json()
         console.log(result)
-        localStorage.setItem("user-info", JSON.stringify(result))
+        localStorage.setItem("user-info", JSON.stringify(response))
 
     }
     const FormTitles = ["User Details", "Verification", "Setup"];
@@ -68,7 +68,7 @@ function Auth() {
                 <div className="lg:px-24 md:px-24 px-10 lg:pt-20 pt-14 pb-24 w-full lg:w-1/2">
                     {PageView()}
                     <div className="lg:w-80 mb-16">
-                        <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
+                        <button type="submit" className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium"
                         onClick={() => {
                             if(step === FormTitles.length -1) {
                                 alert("Form Submitted");
@@ -80,7 +80,7 @@ function Auth() {
                             {step === FormTitles.length -1 ? "Create Account" : "Next"}
                         </button>
                     </div>
-                    <div ></div>
+                    <div></div>
                 </div>
                 <div className=" bg-[url('../src/assets/images/build.jpeg')] bg-black lg:w-1/2 relative bg-cover bg-center build hidden lg:block">
                     {/* <img src={bg} className=" w-full h-full object-cover absolute"/>     */}

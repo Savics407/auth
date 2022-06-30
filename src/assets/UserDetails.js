@@ -36,17 +36,15 @@ function UserDetails({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label>Phone Number</label>
-                    <input type="tel" placeholder="enter phone number" className="box"
-                    value={formData.phoneNumber}
-                        onChange={(event) => setFormData({...formData, phoneNumber: event.target.value})}
-                        required />
+                    <input type="tel" placeholder="enter phone number" className="box" 
+                    value={formData.phone}
+                        onChange={(event) => setFormData({...formData, phone: event.target.value})} />
                 </div>
                 <div className="input relative">
                     <label>Password</label>
-                    <input type="password" placeholder="enter password" className="box" id="pass"
+                    <input type="password" placeholder="enter password" className="box" id="pass" 
                     value={formData.password}
-                        onChange={(event) => setFormData({...formData, password: event.target.value})}
-                        required/>
+                        onChange={(event) => setFormData({...formData, password: event.target.value})}/>
                         <FaRegEyeSlash  className="text-grey absolute top-11 right-4 cursor-pointer" onClick={() => {
                             let x = document.getElementById('pass')
                             if (x.type === "password" ) {
@@ -58,10 +56,9 @@ function UserDetails({formData , setFormData}) {
                 </div>
                 <div className="input relative">
                     <label>Confirm Password</label>
-                    <input type="password" placeholder="confirm password" className="box" id="confirm"
+                    <input type="password" placeholder="confirm password" className="box" id="confirm" 
                     value={formData.confirmPassword}
-                        onChange={(event) => setFormData({...formData, confirmPassword: event.target.value})}
-                        required/>
+                        onChange={(event) => setFormData({...formData, confirmPassword: event.target.value})}/>
                         <FaRegEyeSlash className="text-grey absolute top-11 right-4 cursor-pointer" onClick={() => {
                             let x = document.getElementById('confirm')
                             if (x.type === "password" ) {
@@ -72,7 +69,7 @@ function UserDetails({formData , setFormData}) {
                         }}/>
                 </div>
                 <div className=" flex items-start">
-                    <input type="checkbox" required className="border mr-2"/>
+                    <input type="checkbox"  className="border mr-2"/>
                     <p className="text-xs tracking-wide">I agree with REIC <span className="text-blue-500">Terms & Conditions </span> and <span className="text-blue-500">Privacy Policy</span></p>
                 </div>
                 <div>

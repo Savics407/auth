@@ -29,7 +29,7 @@ function Form({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label className="">Full Name </label>
-                    <input type="text" placeholder="enter full name" className="box" required
+                    <input type="text" placeholder="enter full name" className="box" 
                     value={formData.FullName}
                         onChange={(event) => setFormData({...formData, FullName: event.target.value})}/>
                 </div>
@@ -37,8 +37,8 @@ function Form({formData , setFormData}) {
                 <div className="input">
                     <label>Phone Number</label>
                     <input type="tel" placeholder="enter phone number" className="box" disabled
-                    value={formData.phoneNumber}
-                        onChange={(event) => setFormData({...formData, phoneNumber: event.target.value})}/>
+                    value={formData.phone}
+                        onChange={(event) => setFormData({...formData, phone: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>State</label>
@@ -92,12 +92,12 @@ function Form({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label>Address</label>
-                    <input type="text" placeholder="enter home address" className="box" required value={formData.address} onChange={(event) => setFormData({...formData, address: event.target.value})}/>
+                    <input type="text" placeholder="enter home address" className="box"  value={formData.address} onChange={(event) => setFormData({...formData, address: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>Date Of Birth</label>
                     <input type="date" placeholder="" className="box text-grey" 
-                    required value={formData.dateOfBirth}
+                     value={formData.dateOfBirth}
                         onChange={(event) => setFormData({...formData, dateOfBirth: event.target.value})}/>
                 </div>
                 <div className="input">
