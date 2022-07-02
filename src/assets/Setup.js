@@ -29,20 +29,20 @@ function Form({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label className="">Full Name </label>
-                    <input type="text" placeholder="enter full name" className="box" 
+                    <input required type="text" placeholder="enter full name" className="box" 
                     value={formData.FullName}
                         onChange={(event) => setFormData({...formData, FullName: event.target.value})}/>
                 </div>
                 
                 <div className="input">
                     <label>Phone Number</label>
-                    <input type="tel" placeholder="enter phone number" className="box" disabled
+                    <input required type="tel" placeholder="enter phone number" className="box" disabled
                     value={formData.phone}
                         onChange={(event) => setFormData({...formData, phone: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>State</label>
-                    {/* <input type="option" placeholder="Choose State" className="box"/> */}
+                    {/* <input required type="option" placeholder="Choose State" className="box"/> */}
                     <select className='box text-green'>
                         {/* <option value="" className='text-grey'>--Choose State--</option> */}
                             <option disabled selected hidden>--Choose State--</option>
@@ -88,33 +88,18 @@ function Form({formData , setFormData}) {
                 </div>
                 <div className="input">
                     <label>City</label>
-                    <input type="option" placeholder="enter city" className="box"/>
+                    <input required type="option" placeholder="enter city" className="box"/>
                 </div>
                 <div className="input">
                     <label>Address</label>
-                    <input type="text" placeholder="enter home address" className="box"  value={formData.address} onChange={(event) => setFormData({...formData, address: event.target.value})}/>
+                    <input required type="text" placeholder="enter home address" className="box"  value={formData.address} onChange={(event) => setFormData({...formData, address: event.target.value})}/>
                 </div>
                 <div className="input">
                     <label>Date Of Birth</label>
-                    <input type="date" placeholder="" className="box text-grey" 
+                    <input required type="date" placeholder="" className="box text-grey" 
                      value={formData.dateOfBirth}
                         onChange={(event) => setFormData({...formData, dateOfBirth: event.target.value})}/>
                 </div>
-                <div className="input">
-                    <label>Net Worth</label>
-                    {/* <input type="range" placeholder="" className="box"/> */}
-                     <select className='box text-green' >
-                        <option value="Abia" className='text-grey'>choose range </option>
-                    </select>
-                </div>
-                  <div className="input">
-                    <label>Annual Income</label>
-                    {/* <input type="range" placeholder="" className="box"/> */}
-                     <select className='box text-green' >
-                        <option value="Abia" className='text-grey'>choose range </option>
-                    </select>
-                </div>
-               
                 {/* <div>
                     <button className="bg-green text-white w-full p-3 rounded-xl mt-6 font-medium">Create Account</button>
                 </div> */}

@@ -32,7 +32,7 @@ function Login() {
                 </div>
                 <div className="input">
                     <label className="">Email Address</label>
-                    <input 
+                    <input required 
                         type="email" 
                         placeholder="enter email address" 
                         className="box" 
@@ -41,7 +41,7 @@ function Login() {
                
                 <div className="input relative">
                     <label>Password</label>
-                    <input type="password" placeholder="enter password" className="box" id="pass"
+                    <input required type="password" placeholder="enter password" className="box" id="pass"
                         />
                         <FaRegEyeSlash  className="text-grey absolute top-11 right-4 cursor-pointer" onClick={() => {
                             let x = document.getElementById('pass')
@@ -54,7 +54,7 @@ function Login() {
                 </div>
                 
                 <div className=" flex items-start">
-                    {/* <input type="checkbox"  className="border mr-2"/> */}
+                    {/* <input required type="checkbox"  className="border mr-2"/> */}
                     <p className="text-xs tracking-wide">Forgot Password?</p>
                 </div>
 

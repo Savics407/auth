@@ -26,23 +26,29 @@ function Auth() {
         email: "",
         phone: "",
         password : "",
-        confirmPassword: "",
-        OTPCode: "",
-        FullName: "",
-        state: "",
-        city: "",
-        address: "",
-        dateOfBirth: new Date(""),
-        annualIncome: "",
+        terms: ""
+        // confirmPassword: "",
+        // OTPCode: "",
+        // FullName: "",
+        // state: "",
+        // city: "",
+        // address: "",
+        // dateOfBirth: new Date(""),
     })
 
     async function signup() {
         console.log(formData);
+        const payload = {
+            email: formData.email,
+            password:formData.password,
+            phone:formData.phone,
+            terms:formData.terms
+        }
         const response = await fetch("https://reic.api.simpoo.biz/api/register", {
             method:'POST',
-            body:JSON.stringify(formData),
+            body:JSON.stringify(payload),
             headers: {
-                "Accept" : "application/json"
+                "Content-type" : "application/json"
             }
         })
         const result = await response.json()
@@ -50,11 +56,11 @@ function Auth() {
         localStorage.setItem("user-info", JSON.stringify(response))
 
     }
-    const FormTitles = ["User Details", "Verification", "Setup"];
+    const FormTitles = ["UserDetails", "Verification", "Setup"];
 
     const PageView = () => {
         if (step === 0) {
-            return <UserDetails formData={formData} setFormData={setFormData} />;
+            return <UserDetails formData={formData} setFormData={setFormData} signup={signup} />;
         } else if (step === 1) {
             return <Verification formData={formData} setFormData={setFormData}/>
         } else {
@@ -72,8 +78,11 @@ function Auth() {
                         onClick={() => {
                             if(step === FormTitles.length -1) {
                                 alert("Form Submitted");
-                                signup();
+                            } else if (step === FormTitles.length -2 ){
+                                alert("This is page2")
+                                setStep((currentPage) => currentPage + 1)
                             } else {
+                                signup();
                                 setStep((currentPage) => currentPage + 1)
                             }
                         }}>
